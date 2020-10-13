@@ -14,6 +14,9 @@ function drawing(){
     });
 };
 
+function setGrid(){
+
+};
 
 createColumn();
 drawing();
