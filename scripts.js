@@ -4,7 +4,16 @@ function createColumn(){
         newDiv.classList.add("grid");
         document.getElementById("main-container").appendChild(newDiv);
         
-    }};
+    };
+};
+
+function drawing(){
+    let draw = document.getElementById("main-container");
+    draw.addEventListener("mouseout", function(event){
+        event.target.style.backgroundColor = "black";
+    });
+};
 
 
 createColumn();
+drawing();
