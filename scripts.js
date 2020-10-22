@@ -4,18 +4,18 @@ function createColumn(size) {
         newDiv.classList.add("column");
         newDiv.style.width = 600 / size + "px";
         document.getElementById("grid-container").appendChild(newDiv);
-        createRow(size);
-
+        createRow(size, i);
     }
+    drawing(color);
 }
 
-function createRow(size) {
-    for (let i = 0; i < size; i++) {
+function createRow(size, i) {
+    for (let j = 0; j < size; j++) {
         let newRow = document.createElement("div");
         newRow.classList.add("cell-row");
         newRow.style.height = 600 / size + "px";
         let columns = document.querySelectorAll(".column");
-        columns[i - 1].appendChild(newRow);
+        columns[i].appendChild(newRow);
     }
 }
 
@@ -36,9 +36,9 @@ function setGrid() {
     let newGrid = document.createElement("div")
     newGrid.id = "grid-container";
     document.getElementById("main-container").appendChild(newGrid);
-
     createColumn(size);
+    drawing(color);
 }
 
+let color = "black";
 createColumn(10);
-drawing("black");
