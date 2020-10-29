@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(222, 199, 223);
+}
+
 #main-container {
   
 }
@@ -26,20 +30,51 @@ button:hover {
     color: black;
 }
 
+button#random-color {
+    background-image: linear-gradient(to bottom right, red,orange, green, blue);
+}
+
+button#red {
+    background-color: red;
+}
+
+button#blue {
+    background-color: blue;
+}
+
+button#green {
+    background-color: green;
+}
+
 #grid-container{
 margin: auto;
 display: flex;
 flex-wrap: wrap;
 width: 600px;
 height: 600px;
-border: solid blue 10px;
+border-style: outset;
+
+
 }
 
 .cell-row {
-    outline: solid red 1px;
     background-color: white;
 }
 
 .cell-row:hover {
     background-color: black ;
 }
+
+#name {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 5px;
+    align-items: center;
+}
+
+#icon {
+    width: 25px;
+    height: 25px;
+}
+
