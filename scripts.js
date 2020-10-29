@@ -20,10 +20,21 @@ function createRow(size, i) {
 }
 
 function drawing(color) {
+    let random = document.getElementById("random-color");
+    random.addEventListener("click", randomColor);
+
     let draw = document.getElementById("grid-container");
+    console.log("drawing");
+    console.log(color);
     draw.addEventListener("mouseout", function (event) {
         event.target.style.backgroundColor = color;
     });
+}
+
+function randomColor() {
+    let color = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+    console.log(color);
+    drawing(color);
 }
 
 function setGrid() {
